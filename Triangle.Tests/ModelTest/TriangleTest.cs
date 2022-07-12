@@ -40,5 +40,19 @@ namespace TriangleChecker.Tests
       Triangle testTriangle = new Triangle();
       Assert.AreEqual(true, testTriangle.IsIsosceles(2, 2, 3));
     }
+
+    [TestMethod]
+    public void IsIsosceles_EqualOnTwoSides_False()
+    {
+      Triangle testTriangle = new Triangle();
+      Assert.AreEqual(false, testTriangle.IsIsosceles(2, 2, 2));
+    }
+
+    [TestMethod]
+    public void IsScalene_NoSidesAreEqual_True()
+    {
+      Triangle testTriangle = new Triangle();
+      Assert.AreEqual(true, testTriangle.IsScalene(1, 2, 3));
+    }
   }
 }
